@@ -1,0 +1,44 @@
+.header {
+    background: lightblue;
+    padding-left: 12%;
+    padding-right: 12%;
+
+};
+
+.headerInside{
+    width: 75%;
+    margin: auto;
+    height: 60px
+}
+
+.logo{
+    max-width:100%;
+}
+
+
+.heading{
+    text-align: center;
+    font-family: verdana;
+    font-size: 300%;
+}
+
+.hourly{
+    margin: 0%;
+}
+
+.background{
+    margin-left: 15%;
+    margin-right: 15%;
+    width: 75%;
+    background: lightgrey;
+}
+
+.headingSmall{
+    text-align: center;
+    font-family: verdana;
+    font-size: 150%;
+}
+
+.hourlyTd{
+    padding: 10px;
+}
