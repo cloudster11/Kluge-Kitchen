@@ -29,7 +29,7 @@
 .background{
     margin-left: 15%;
     margin-right: 15%;
-    width: 70%;
+    width: 75%;
     background: lightgrey;
 }
 
@@ -75,3 +75,8 @@
 
 }
 
+.title{
+    text-align: center;
+    font-family: verdana;
+    font-size: 120%;
+}
