@@ -28,7 +28,7 @@ async def request(url: str, method: str = "GET", body: Optional[str] = None,
     response = await pyfetch(url, **kwargs)
     return response
 
-allTags = await request("http://85.215.101.243:5000/tags")
+allTags = await request("https://c33894a.online-server.cloud/tags")
 
 currentJson = await allTags.json()
 
