@@ -42,3 +42,9 @@
 .hourlyTd{
     padding: 10px;
 }
+
+.tagTable{
+    width: 100%;
+    padding: 5px;
+    font-family: verdana;
+}

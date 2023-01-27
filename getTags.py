@@ -32,6 +32,36 @@ allTags = await request("https://c33894a.online-server.cloud/tags")
 
 currentJson = await allTags.json()
 
-
+row = 0
+col = 5
 for x in currentJson:
-    print(f"<input type=\"checkbox\" id=\"{x[0]}\" value=\"{x[0]}\"> <label for=\"{x[0]}\">{x[1]}</label><br>")
+    if col == 5:
+        row += 1
+        newRow = document.createElement("tr")
+        newRow.setAttribute("id", f"r_{row}")
+        document.getElementById("tagTable").append(newRow)
+        col = 0
+
+
+    newCol = document.createElement("td")
+    newCol.setAttribute("id", f"r_{row}_c_{col}")
+
+    document.getElementById(f"r_{row}").append(newCol)
+
+    element = document.createElement("input")
+    element.setAttribute("type", "checkbox")
+    element.setAttribute("id", f"{x}")
+    element.setAttribute("value", f"{x}")
+    document.getElementById(f"r_{row}_c_{col}").append(element)
+
+    label = document.createElement("label")
+    label.setAttribute("for", f"{x}")
+    label.innerText = f"  {currentJson[x]}"
+    document.getElementById(f"r_{row}_c_{col}").append(label)
+    col += 1
+
+#    element = document.createElement("input")
+#    element.setAttribute("type", "checkbox")
+#    element.setAttribute("value", f"{x}")
+#    document.getElementById("tags").append(element)
+
