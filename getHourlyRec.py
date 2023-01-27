@@ -31,7 +31,7 @@ async def request(url: str, method: str = "GET", body: Optional[str] = None,
 def setRecipePicture(id, count):
     document.getElementById(f"hourly{count}").setAttribute("src", f"img/{id}.png")
 
-currentRec = await request("http://85.215.101.243:5000/hourlyRecipes")
+currentRec = await request("https://c33894a.online-server.cloud/hourlyRecipes")
 
 currentJson = await currentRec.json()
 
