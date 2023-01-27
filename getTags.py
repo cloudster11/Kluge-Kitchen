@@ -52,6 +52,7 @@ for x in currentJson:
     element.setAttribute("type", "checkbox")
     element.setAttribute("id", f"{x}")
     element.setAttribute("value", f"{x}")
+    element.setAttribute("class", f"checkTag")
     document.getElementById(f"r_{row}_c_{col}").append(element)
 
     label = document.createElement("label")
