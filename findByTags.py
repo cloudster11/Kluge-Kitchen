@@ -117,12 +117,6 @@ async def search(self):
             document.getElementById("recipePreview").append(recDiv)
 
 
-    for x in currentIds:
-        y = document.getElementById(f"{x}_1_1")
-        y.addEventListener("click", create_proxy(showRec))
-        currentDoms.append(y)
-
-
 
 async def request(url: str, method: str = "GET", body: Optional[str] = None,
                   headers: Optional[dict[str, str]] = None, **fetch_kwargs: Any) -> FetchResponse:
