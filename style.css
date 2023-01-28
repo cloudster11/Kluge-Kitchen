@@ -40,7 +40,7 @@
 }
 
 .hourlyTd{
-    align: center;
+    text-align: center;
     width: 20%;
     padding: 10px;
     vertical-align: center;
