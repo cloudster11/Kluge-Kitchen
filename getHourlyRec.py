@@ -28,13 +28,13 @@ async def request(url: str, method: str = "GET", body: Optional[str] = None,
     response = await pyfetch(url, **kwargs)
     return response
 
-def setRecipePicture(id, count):
-    document.getElementById(f"hourly{count}").setAttribute("src", f"img/{id}.png")
-
 currentRec = await request("https://c33894a.online-server.cloud/hourlyRecipes")
 
 currentJson = await currentRec.json()
 
-
 for x in currentJson:
-    setRecipePicture(currentJson[x][0], x)
+    document.getElementById(f"hourly{x}src").innerText = f"{currentJson[x][4]}"
+    document.getElementById(f"hourly{x}Title").innerText = f"{currentJson[x][1]}"
+    document.getElementById(f"hourly{x}").setAttribute("src", f"img/{currentJson[x][0]}.png")
+    document.getElementById(f"hourly{x}Dif").innerText = f"{currentJson[x][3]}/3"
+    document.getElementById(f"hourly{x}Time").innerText = f"{currentJson[x][2]} min"
