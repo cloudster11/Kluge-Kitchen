@@ -41,6 +41,26 @@
 
 .hourlyTd{
     padding: 10px;
+    height: 100px;
+    vertical-align: center
+}
+
+.titleTd{
+    text-align: center;
+    font-weight: bold;
+}
+
+.srcTd{
+    text-align: center;
+    font-style: italic
+}
+.infoTd{
+    text-align: center;
+}
+
+.hourlyPic{
+    height: 100%;
+    align: center;
 }
 
 .tagTable{
