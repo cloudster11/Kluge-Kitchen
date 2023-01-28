@@ -40,9 +40,9 @@
 }
 
 .hourlyTd{
+    width: 20%;
     padding: 10px;
-    height: 100px;
-    vertical-align: center
+    vertical-align: center;
 }
 
 .titleTd{
