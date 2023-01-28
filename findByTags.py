@@ -104,8 +104,11 @@ async def search(self):
             recDiv.innerHTML = f"""
                 <table width="70%">
                     <tr>
-                        <td id="{recipe}_1_1" rowspan="2" class="recipePic">{recipeImg}</td>
+                        <td id="{recipe}_1_1" rowspan="3" class="recipePic">{recipeImg}</td>
                         <td id="{recipe}_1_2" colspan="2" width="75%" class="title">{recipeFull["name"]}</td>
+                    </tr>
+                    <tr>
+                        <td id="{recipe}_3_2" colspan="2" width="75%" class="srcTd">{recipeFull["Quelle"]}</td>
                     </tr>
                     <tr>
                         <td id="{recipe}_2_2" width="50%"><p class="title">Dauer: {recipeFull["time"]} min</p></td>
@@ -115,7 +118,6 @@ async def search(self):
             """
 
             document.getElementById("recipePreview").append(recDiv)
-
 
 
 async def request(url: str, method: str = "GET", body: Optional[str] = None,
@@ -148,3 +150,5 @@ async def request(url: str, method: str = "GET", body: Optional[str] = None,
 
 e = document.getElementById("search")
 e.addEventListener("click", create_proxy(search))
+
+
